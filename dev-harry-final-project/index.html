@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>dev-harry-final-project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'><link rel="stylesheet" href="styles/style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!--As a frequent orderer
+
+I want to load in my favorite (or last) order
+
+So That I can start from there and modify as needed  -->
+
+<!--WEBPAGE DETAILS
+
++ Web App To Order from a Bakery +
+-->
+
+
+
+<head>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@400;700&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Pattaya&display=swap');
+</style>
+</head>
+
+<nav class ="navbar navbar-expand-sm navbar navbar-dark sticky-top">
+     <div class="container-fluid">
+       <a class="navbar-brand" href="#">BS</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/baileestrait/dev-harry-lab">GitHub Repo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://validator.nu/?doc=https%3A%2F%2Fbaileestrait.github.io%2Fdev-harry-final-project%2F">Nu Validator</a>
+          </li>
+        </ul>
+      </div>
+  </div>
+  </nav>
+     
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 mt-4">
+      <h1 class=mainTitle id="mainTitle">Bailee's Bakery</h1>
+
+        <br>
+<!-- <h3 class=startOrder id="startOrder">Start Your Order!</h3> -->
+      <div class="card">
+      <form>
+        <br>
+        <h5 class=subSection id="subSection">How Can We Contact You?</h5>
+        <br>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1"> First Name: </span>
+          <input id="inputFirstName" type="text" class="form-control" aria-label="firstName" aria-describedby="basic-addon1">
+          <span class="input-group-text" id="basic-addon1"> Last Name: </span>
+          <input id="inputLastName" type="text" class="form-control" aria-label="lastName" aria-describedby="basic-addon1">
+        <span class="input-group-text" id="basic-addon1"> Phone Number: </span>
+          <input id="inputPhoneNumber" type="text" class="form-control" aria-label="phoneNumber" aria-describedby="basic-addon1">
+        </div>
+        <br>
+          <h5 class=subSection id="subSection">When Do You Need This?</h5>
+        <br>
+            <div class="d-grid gap-2 col-6 mx-auto">
+        <input type="date" id="inputDate">
+        <br>
+        <h5 class=subSection id="subSection">What Can We Get Started For You?</h5>
+        <div class="form-check">
+          <input type="radio" class ="form-check-input" id="cakeRadio" name="optradio" value="Cake">Cake
+          <label class="form-check-label" for="cakeRadio"></label>
+        </div>
+          <div class="form-check">
+          <input type="radio" class ="form-check-input" id="cookieRadio" name="optradio" value="Cookies">Cookies
+          <label class="form-check-label" for="cookieRadio"></label>
+        </div>
+              <br>
+              <div class="dropdown-show">
+          <select id="inputSizeAmt" class="form-select" aria-label="Default select example">
+            <option selected disabled>Cake Size or Cookie Amount</option>
+        </select>
+              </div>
+        <br>
+              <div class="dropdown-show">
+        <select id="inputFlavor" class="form-select" aria-label="Default select example">
+            <option selected disabled>Cake Flavor or Cookie Flavor</option>
+        </select>
+              </div>
+        <br>
+              <div class="dropdown-show">
+          <select id="inputIcingFlavor" class="form-select" aria-label="Default select example">
+            <option selected disabled>Choose Icing Flavor</option>
+        </select>
+              </div>
+        <br>
+              <div class="dropdown-show">
+        <select id="inputIcingColor" class="form-select" aria-label="Default select example">
+            <option selected disabled>Choose Icing Color</option>
+        </select>
+              </div>
+        <br>
+<h5 class=subSection id="subSectionDesign">What About Designs?</h5>
+      <div class="form-check" id="flowerCheck">
+        <input type="checkbox" class ="form-check-input" id="flowersCheck" name="optcheckbox" value="Flowers"> Flowers
+        </div>
+      <div class="form-check" id="balloonCheck">
+        <input type="checkbox" class ="form-check-input" id="balloonsCheck" name="optcheckbox" value="Balloons"> Balloons
+        </div>
+      <div class="form-check" id="confettiCheck">
+        <input type="checkbox" class ="form-check-input" id="confettiCheck" name="optcheckbox" value="Confetti"> Confetti
+        </div>
+     <div class="form-check" id="noDesignCheck">
+        <input type="checkbox" class ="form-check-input" id="noDesignCheck" name="optcheckbox" value="NoDesign"> No Design
+        </div>
+         <select id="inputDesignColor" class="form-select" aria-label="Default select example">
+            <option selected disabled>Choose Design Color</option>
+        </select>
+        <br>
+<h5 class=subSection id="subSectionMessage">What About A Message?</h5>
+        <div class="input-group">
+  <textarea id="inputMessage" class="form-control" aria-label="With textarea"></textarea>
+</div>
+<select id="inputMessageColor" class="form-select" aria-label="Default select example">
+            <option selected disabled>Choose Message Color</option>
+        </select>
+     <br> 
+              <div class="form-check" id="rememberMeCheck">
+        <input type="checkbox" class ="form-check-input" id="rememberMeCheck" name="optcheckbox" value="Remember Me"><h6><strong>Remember Me</strong></h6>
+        </div>
+              <br>
+    <div class="d-grid gap-2 col-6 mx-auto">
+  <button class="btn btn-primary" style = "background-color: #F8BBD0; border-color: #F8BBD0; color: black" type="button" id="submitOrder">Submit Order!</button>
+              </div>
+             
+        </div>
+      </form>
+        
+        
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js'></script><script  src="scripts/script.js"></script>
+
+</body>
+</html>
