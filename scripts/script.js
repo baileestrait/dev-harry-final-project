@@ -1,9 +1,6 @@
 $(()=> {
   console.log('ready');
   
-  $("input[type=radio]").on("change", function(){
-    
-    console.log("did it change? ");
 
     let itemChoice = $("input[type=radio]:checked").val();
  console.log("itemChoice: ", itemChoice);
